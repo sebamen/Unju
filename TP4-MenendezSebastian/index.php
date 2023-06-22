@@ -8,14 +8,13 @@
 </head>
 <body>
     <?php
-        // spm 20230610: LLama a la cabecera
+        // spm 20230622: LLama a la cabecera
         include("cabecera.php");
         // Llamamos a la función que contiene todas las funciones PHP
         include("tp4-funciones.php");
 
         // isset(): Determina si una variable ha sido definida y no es nula. Devuelve FALSE en caso de le pasemos una variable sin definir, 
         // una variable definida pero sin valor o con el valor puesto a null, y en el resto de casos devuelve TRUE.
-        // empty(): Determina si la variable tiene un valor vacío, por llamarlo de alguna forma.
         if(isset($_POST['cadena1'])){
             $cadena1 = $_POST['cadena1'];
             if(strlen($cadena1) > 80){
@@ -55,9 +54,23 @@
             echo "3b. e-mail incompleto, por favor corrija su email <br>"; 
         }
     ?>
+    <br>
+    <hr>
+    <form action="#" method="post">
+        <br>
+        <label>4. Nro. de DNI: </label><input type="text" name="dni" required>
+        <input type="submit" value="Controlar">
+    </form>
+    <?php  if (isset($_POST['dni'])) {
+        echo "a. Eliminar puntos: ". str_replace('.','',$_POST['dni']) ."  <br>"; 
+        echo "b. Eliminar puntos: ". str_replace('.','',$_POST['dni']) ."  <br>"; 
+        echo "c. Eliminar puntos: ". str_replace('.','',$_POST['dni']) ."  <br>"; 
+        }
+    ?>
+    <hr><br>
     
     <?php
-        // spm 20230611: LLama al pie de página
+        // spm 20230622: LLama al pie de página
         include("pie.php");
     ?>
 </body>
