@@ -31,5 +31,8 @@ function perim_super($v1){
     return  ($valores) ;
 }
 
-
+// spm 20230623: Agrego la función que solicita el punto 5 del TP4
+function cadena_sin_espacios($ciudades){
+    return str_replace(" ","",implode($ciudades));
+}
 ?>

@@ -40,7 +40,7 @@
         Lo que realiza el código es lo siguiente. Declara array1 con caracteres como elementos y array2 como un string vacío.<br>
         Le asigna a la variable calculo una cadena de caracteres. <br>
         Quita de la cadena calculo los caracteres que sean elementos de array1.<br>
-        De la cadena que resulta toma los dos caracteres a partir de la segunda posición y los muestra.
+        De la cadena que resulta, toma los dos caracteres a partir de la segunda posición y los muestra.
     </p>
     <br>
     <hr>
@@ -58,16 +58,24 @@
     <hr>
     <form action="#" method="post">
         <br>
-        <label>4. Nro. de DNI: </label><input type="text" name="dni" required>
+        <label>4. Nro. de DNI: </label><input type="text" name="dni"> <!-- spm 20230623: si pongo la opción required no hace falta que controle que está vacío -->
         <input type="submit" value="Controlar">
     </form>
     <?php  if (isset($_POST['dni'])) {
-        echo "a. Eliminar puntos: ". str_replace('.','',$_POST['dni']) ."  <br>"; 
-        echo "b. Eliminar puntos: ". str_replace('.','',$_POST['dni']) ."  <br>"; 
-        echo "c. Eliminar puntos: ". str_replace('.','',$_POST['dni']) ."  <br>"; 
+        echo "a. Eliminar puntos: ". str_replace('.','',$_POST['dni']) ."  <br>";
+        if(strlen(str_replace('.','',$_POST['dni']))==7) echo "b. DNI de 7 dígitos: Trámite para jubilación <br>"; 
+        if(empty($_POST['dni'])) echo "c. DNI es obligatorio y no puede estar en blanco <br>"; //spm 20230623: si pongo la opción required en el input no hace falta que controle que está vacío
         }
     ?>
     <hr><br>
+    <?php
+        $ciudades = array('Buenos Aires', 'Nueva York', 'Montevideo'); 
+        echo "5. <br>Ciudades: ";
+        echo print_r($ciudades)."<br><br>";
+        echo "Ciudades sin espacios: ". cadena_sin_espacios($ciudades) ."<br>"; 
+    ?>
+    <br>
+    <hr>
     
     <?php
         // spm 20230622: LLama al pie de página
