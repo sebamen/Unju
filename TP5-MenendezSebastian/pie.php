@@ -7,7 +7,9 @@
   class PiePagina{
     private $titulo;
     private $ubicacion;
-    public function __construct(){
+    public function __construct($tit,$ubi){
+      $this->titulo = $tit;
+      $this->ubicacion = $ubi;
     }
     public function graficar($tit,$ubi){
       echo "<div style='font-size:40px;text-align:".$ubi."'>";

@@ -13,7 +13,7 @@
         $miCabecera = new CabeceraPagina('','');
         $miCabecera->graficar('Trabajo Práctico Nº 5','center');
         $miCabecera->graficar('Punto 1','center');
-        $miCabecera->graficar('Auto: Sebastián Menéndez','center');
+        $miCabecera->graficar('Autor: Sebastián Menéndez','center');
         //Definimos la clase Persona
         class Persona{
             //Definición de atributos
