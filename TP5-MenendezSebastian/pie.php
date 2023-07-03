@@ -7,7 +7,7 @@
   class PiePagina{
     private $titulo;
     private $ubicacion;
-    public function __construct($tit,$ubi){
+    public function __construct($tit='',$ubi=''){
       $this->titulo = $tit;
       $this->ubicacion = $ubi;
     }

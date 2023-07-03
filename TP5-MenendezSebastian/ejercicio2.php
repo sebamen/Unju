@@ -10,7 +10,7 @@
     <?php
         // spm 20230622: LLama a la cabecera
         include("cabecera.php");
-        $miCabecera = new CabeceraPagina('','');
+        $miCabecera = new CabeceraPagina();
         $miCabecera->graficar('Trabajo Práctico Nº 5','center');
         $miCabecera->graficar('Punto 2','center');
         $miCabecera->graficar('Autor: Sebastián Menéndez','center');

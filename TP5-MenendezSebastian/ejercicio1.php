@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        // spm 20230622: LLama a la cabecera
+        // spm 20230627: LLama a la cabecera
         include("cabecera.php");
         $miCabecera = new CabeceraPagina('','');
         $miCabecera->graficar('Trabajo Práctico Nº 5','center');
@@ -53,7 +53,7 @@
         echo "<br><br><br><br><br><br><br><br>";
     
 
-        // spm 20230622: LLama a la calse Pie de página
+        // spm 20230627: LLama a la calse Pie de página
         include("pie.php");
         $miPie = new PiePagina();
         $miPie->graficar('Fin Trabajo Práctico Nº 5','center');

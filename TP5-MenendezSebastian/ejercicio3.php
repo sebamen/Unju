@@ -14,13 +14,13 @@
         $miCabecera->graficar('Trabajo Práctico Nº 5','center');
         $miCabecera->graficar('Punto 3','center');
         $miCabecera->graficar('Autor: Sebastián Menéndez','center');
-        echo "<br><br><br><br><br><br><br><br>";
-        echo "<br><br><br><br><br><br><br><br>";
+        echo "<br><br><br><br><br>";
+        echo "<br><br><br><br><br>";
 
         $miCabecera->graficar('Clases Cabecera y Pie','center');
 
-        echo "<br><br><br><br><br><br><br><br>";
-        echo "<br><br><br><br><br><br><br><br>";
+        echo "<br><br><br><br><br>";
+        echo "<br><br><br><br><br>";
     
 
         // spm 20230703: LLama a la calse Pie de página
