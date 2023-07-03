@@ -14,7 +14,6 @@
         $miCabecera->graficar('Trabajo Práctico Nº 5','center');
         $miCabecera->graficar('Punto 1','center');
         $miCabecera->graficar('Auto: Sebastián Menéndez','center');
-        // Llamamos a la clase persona
         //Definimos la clase Persona
         class Persona{
             //Definición de atributos
@@ -37,18 +36,28 @@
             public function setName(){
                 echo strtolower($this->nombre) ;
             }
+            public function getName(){
+                echo ucwords($this->nombre) ;
+            }
         }
 
         //Definición de Objeto (instancia de la clase Persona)
         $persona1=new Persona();
-        $persona1->inicializar("Sebastián","Menéndez",51);
+        $persona1->inicializar("Sebastián pablo","Menéndez",51);
+        echo "<br><br><br><br><br><br><br><br>";
+        echo "Nombre en minúsculas con setName: ";
         $persona1->setName();
+        echo "<br><br>";
+        echo "Nombre en Capital con getName: ";
+        $persona1->getName();
+        echo "<br><br><br><br><br><br><br><br>";
     
 
         // spm 20230622: LLama a la calse Pie de página
         include("pie.php");
         $miPie = new PiePagina();
         $miPie->graficar('Fin Trabajo Práctico Nº 5','center');
+        $miCabecera->graficar('Punto 1','center');
     ?>
 </body>
 </html>
