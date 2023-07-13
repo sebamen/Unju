@@ -8,17 +8,33 @@
 <body>
     <?php
     //Punto2
-    include("Postulante.php");
-    include("Empleado.php");
-    $postulante =new Postulante("Diego Darío","Gómez","1987-05-13","Av. Villafañe 234","Masculino","Tiempo completo","rrhh","archivo.pdf");
-    echo $postulante->imprimir();
-    echo "Edad: " . $postulante->edad() . "<br>";
-    $empleado = new Empleado("Leonardo","Ferrufino","1900-07-03","Av. Libertad 234","Masculino","Medio tiempo","informática","2010-05-04");
-    echo $empleado->imprimir();
-    echo "Antiguedad: ".$empleado->antiguedad() . "<br>";
-    //Punto 3
-    echo "<br>";
-    echo Empleado::puestos();
+        // spm 20230713: LLama a la cabecera
+        include("cabecera.php");
+        $miCabecera = new CabeceraPagina('','');
+        $miCabecera->graficar('Trabajo Práctico Nº 6','center');
+        $miCabecera->graficar('Puntos 2 y 3','center');
+        $miCabecera->graficar('Autor: Sebastián Menéndez','center');
+        // Fin cabecera
+
+        echo "<br><br><br>";
+        include("Postulante.php");
+        include("Empleado.php");
+        $postulante =new Postulante("Sebastián","Menéndez","1972-03-13","Av. Carlos Calvo 3643","Masculino","Tiempo completo","informática","cv.pdf");
+        echo $postulante->imprimir();
+        echo "Edad: " . $postulante->edad() . "<br>";
+        $empleado = new Empleado("Juan Carlos","Heredia","1999-10-23","Av. Córdoba 988","Masculino","Medio tiempo","contable","2014-08-24");
+        echo $empleado->imprimir();
+        echo "Antiguedad: ".$empleado->antiguedad() . "<br>";
+        //Punto 3
+        echo Empleado::puestos();
+        echo "<br><br><br>";
+
+        // spm 20230713: LLama a la calse Pie de página
+        include("pie.php");
+        $miPie = new PiePagina();
+        $miPie->graficar('Fin Trabajo Práctico Nº 6','center');
+        $miCabecera->graficar('Puntos 2 y 3','center');
+        // FIn pie
     ?>
 </body>
 </html>

@@ -7,6 +7,12 @@
 </head>
 <body>
     <?php
+        // spm 20230713: LLama a la cabecera
+        include("cabecera.php");
+        $miCabecera = new CabeceraPagina('','');
+        $miCabecera->graficar('Trabajo Práctico Nº 6','center');
+        $miCabecera->graficar('Punto 1','center');
+        $miCabecera->graficar('Autor: Sebastián Menéndez','center');
         //if(isset($_POST['nombre'])){
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             dar_de_alta();
@@ -23,10 +29,11 @@
             $p = $_POST["puesto"];
             $c = $_POST["cv"];
             $post = new Postulante($n,$a,$f_n,$d,$s,$dis,$p,$c);
-            echo $post->imprimir();
-            echo $post->imprimir2();
+            //echo $post->imprimir();
+            echo $post->mostrarPostulacion();
             //echo "Edad: ". $post->edad();
         }
+        
     
     ?>
     <form action="" method="post">
@@ -60,5 +67,12 @@
         <button type="submit">Enviar datos</button>
         <button type="reset">Borrar</button>
     </form>
+    <?php
+        // spm 20230713: LLama a la calse Pie de página
+        include("pie.php");
+        $miPie = new PiePagina();
+        $miPie->graficar('Fin Trabajo Práctico Nº 6','center');
+        $miCabecera->graficar('Punto 1','center');
+    ?>
 </body>
 </html>

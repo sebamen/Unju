@@ -1,20 +1,20 @@
 <?php
 require_once("Empleado.php");
-class Informatico extends Empleado{
+class RRHH extends Empleado{
     
-    private int $basico=200000;
-    private int $aplicaciones;
+    private int $basico=300000;
+    private int $proyectos;
 
     public function __construct($nom, $apell, $fn, $dir, $s, $disp, $pues, $fi, $ap){
         parent::__construct($nom, $apell, $fn, $dir, $s, $disp, $pues, $fi);
-        $this->aplicaciones = $ap;
+        $this->proyectos = $ap;
     }
     public function calcularSueldo(){
         $calculo = $this->basico;
-        if($this->aplicaciones<6){
-            $calculo += 10000;
-        }else{
+        if($this->proyectos<6){
             $calculo += 20000;
+        }else{
+            $calculo += 30000;
         }
         return $calculo;
     } 

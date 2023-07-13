@@ -17,7 +17,7 @@ class Postulante extends Persona{
     public function imprimir(){
         return parent::imprimir()  ."; " . $this->disponibilidad . "; " . $this->puesto . ";" . $this->cv ."<br>";  
     }
-    public function imprimir2(){
+    public function mostrarPostulacion(){
         return "El postulante: ". parent::getNombre() . ", " . parent::getApellido() . " se insccribió en el puesto " . $this->puesto."<br>";
     }
     public function edad(){        

@@ -29,7 +29,7 @@ class Empleado extends Persona{
         return "Puestos disponibles: informática, contable y rrhh.";
     }
 
-    public function sueldo(){
+    public function calcularSueldo(){
         return "50000";
     }
 }
