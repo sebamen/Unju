@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevo Movimiento</title>
 </head>
-<body>
+<body style="background-color: lightblue;">
     <form action="conexion.php" method="post">
         <!-- <label for="">ID:</label><input type="text" name="id_mov" id="id_mov" readonly><br> -->
         <label for="">Fecha:</label><input type="date" name="fecha" id="fecha"><br>
@@ -20,7 +20,7 @@
         <select name="forpag" id="forpag">
             <option value="efectivo">Efectivo</option>
             <option value="cheque">Cheque</option>
-            <option value="tarjeta de credito">Tarjeta de Crédito</option>
+            <option value="tarjeta de crédito">Tarjeta de Crédito</option>
             <option value="transferencia bancaria">Transferencia Bancaria</option>
         </select><br>
         <label for="">Familiar:</label>
