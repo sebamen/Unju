@@ -24,12 +24,12 @@
                 $fila = mysqli_fetch_array($resultado);
         ?>
             <br><br><br><br><br>
-            <center>
-            <h1>Edición de  Movimiento</h1>
-            <form action="conexion.php" method="post">
-                <div class="form-group"  style="border-top: 1px">
+            <div class="container center-h center-v">
+                <form action="conexion.php" method="post">
+                <center><h1>Edición de Movimiento</h1></center><br><br>
+                <div class="form-group" style="border-top: 1px">
                     <row>
-                        <label for="">ID:</label><input style="text-align:right;" type="text" name="id_movm" id="id_movm" value="<?php echo $fila["id_mov"]; ?>" readonly>
+                        <label for="">ID:</label><input style="text-align:right;" size="10" type="text" name="id_movm" id="id_movm" value="<?php echo $fila["id_mov"]; ?>" readonly>
                         <label for="">Fecha:</label><input type="date" name="fecham" id="fecham" value="<?php echo $fila["fecha"]; ?>">
                     </row>
                     <br><br>
@@ -39,8 +39,8 @@
                             <option value="ingreso" <?php if($fila["tipo"]=="ingreso") echo "selected"; ?>>Ingreso</option>
                             <option value="egreso" <?php if($fila["tipo"]=="egreso") echo "selected"; ?>>Egreso</option>
                         </select>
-                        <label for="">Descripción:</label><input type="text" name="descripcionm" id="descripcionm" value="<?php echo $fila["descripcion"]; ?>">
-                        <label for="">Importe:</label><input type="number" step="0.01" name="importem" id="importem" value="<?php echo $fila["monto"]; ?>">
+                        <label for="">Descripción:</label><input type="text" name="descripcionm" id="descripcionm" value="<?php echo mb_convert_encoding($fila["descripcion"], 'UTF-8'); ?>"><br><br>
+                        <label for="">Importe:</label><input style="text-align:right;" size="8" type="number" step="0.01" name="importem" id="importem" value="<?php echo $fila["monto"]; ?>">
                     </row>
                     <br><br>
                     <row>
@@ -62,11 +62,11 @@
                     </row>
                     <br><br>
                     <button type="submit">Modificar</button>
+                    <br><br>
+                    <button type=""><a href='consulta.php'>Volver</a></button>
                 </div>
             </form>
-            <br><br>
-            <button type=""><a href='consulta.php'>Volver</a></button>
-            </center>
+            </div>
         <?php
             }
         }

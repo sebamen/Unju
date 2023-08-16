@@ -302,3 +302,22 @@ background-color: rgba(255,255,255,0.1);
 .table100.ver6 .row100 td:hover {
 background-color: rgba(255,255,255,0.2);
 }
+
+.container {
+    background: lightblue;
+    margin: 0 0 1rem;
+    height: 10rem;
+    display: flex;
+    /* align-items por defecto tiene el valor `stretch` */
+    align-items: start;
+  }
+  .center-h {
+    justify-content: center;
+  }
+  .center-v {
+    align-items: center;
+  }
+  .child {
+    background: #60e0b0;
+    padding: .2rem;
+  }

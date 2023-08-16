@@ -44,9 +44,9 @@
             VALUES (NULL,'$fecha','$tipo','$descripcion',$importe,'$forpag','$familiar')";
         $resultado = mysqli_query($enlace,$insertar);
         if($resultado){
-            echo "Movimiento ingresado.<br><button type=''><a href='consulta.php'>Volver</a></button>";
+            echo "<center>Movimiento ingresado.<br><button type=''><a href='consulta.php'>Volver</a></button></center>";
         }else{
-            echo "No pudo ingresarse el movimiento.<br><button type=''><a href='consulta.php'>Volver</a></button>";
+            echo "<center>No pudo ingresarse el movimiento.<br><button type=''><a href='consulta.php'>Volver</a></button></center>";
         }
         desconectar($enlace);
 
@@ -66,9 +66,9 @@
         $update_mov = "UPDATE `movimientos` SET `fecha`='$fecha',`tipo`='$tipo',`descripcion`='$descripcion',`monto`=$importe,`forma_de_pago`='$forpag',`id_familia`='$familiar' WHERE id_mov = $idmov ";
         $resultado = mysqli_query($enlace,$update_mov);
         if($resultado){
-            echo "Movimiento modificado.<br><button type=''><a href='consulta.php'>Volver</a></button>";
+            echo "<center>Movimiento modificado.<br><button type=''><a href='consulta.php'>Volver</a></button></center>";
         }else{
-            echo "No se pudo modificar el movimiento.<br><button type=''><a href='consulta.php'>Volver</a></button>";
+            echo "<center>No se pudo modificar el movimiento.<br><button type=''><a href='consulta.php'>Volver</a></button></center>";
         }
         desconectar($enlace);
 

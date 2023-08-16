@@ -6,36 +6,41 @@
     <title>Nuevo Movimiento</title>
 </head>
 <body style="background-color: lightblue;">
-    <form action="conexion.php" method="post">
-        <!-- <label for="">ID:</label><input type="text" name="id_mov" id="id_mov" readonly><br> -->
-        <label for="">Fecha:</label><input type="date" name="fecha" id="fecha"><br>
-        <label for="">Tipo:</label>
-            <select name="tipo" id="tipo">
-            <option value="ingreso">Ingreso</option>
-            <option value="egreso">Egreso</option>
-        </select><br>
-        <label for="">Descripción:</label><input type="text" name="descripcion" id="descripcion"><br>
-        <label for="">Importe:</label><input type="number" step="0.01" name="importe" id="importe"><br>
-        <label for="">Forma de pago:</label>
-        <select name="forpag" id="forpag">
-            <option value="efectivo">Efectivo</option>
-            <option value="cheque">Cheque</option>
-            <option value="tarjeta de crédito">Tarjeta de Crédito</option>
-            <option value="transferencia bancaria">Transferencia Bancaria</option>
-        </select><br>
-        <label for="">Familiar:</label>
-        <select name="familiar" id="familiar">
-            <option value="1">Damian Suarez</option>
-            <option value="2">Julia Zambrano</option>
-            <option value="3">Alberto Suarez</option>
-            <option value="4">Julia Suarez</option>
-            <option value="5">Delia Fernández</option>
-        </select><br>
-        <button type="submit">Dar de Alta</button>
-        <button type="reset">Borrar</button>
-    </form>
-    <br><br>
-    <button type=""><a href='consulta.php'>Volver</a></button>
-
+        <br><br><br><br><br>
+        <div class="container center-h center-v">
+            <form action="conexion.php" method="post">
+                <h1>Nuevo Movimiento</h1><br><br>
+                <div class="form-group" style="border-top: 1px">
+                    <!-- <label for="">ID:</label><input type="text" name="id_mov" id="id_mov" readonly><br> -->
+                    <label for="">Fecha:</label><input type="date" name="fecha" id="fecha"><br><br>
+                    <label for="">Tipo:</label>
+                        <select name="tipo" id="tipo">
+                        <option value="ingreso">Ingreso</option>
+                        <option value="egreso">Egreso</option>
+                    </select><br><br>
+                    <label for="">Descripción:</label><input type="text" name="descripcion" id="descripcion"><br><br>
+                    <label for="">Importe:</label><input type="number" step="0.01" name="importe" id="importe"><br><br>
+                    <label for="">Forma de pago:</label>
+                    <select name="forpag" id="forpag">
+                        <option value="efectivo">Efectivo</option>
+                        <option value="cheque">Cheque</option>
+                        <option value="tarjeta de crédito">Tarjeta de Crédito</option>
+                        <option value="transferencia bancaria">Transferencia Bancaria</option>
+                    </select><br><br>
+                    <label for="">Familiar:</label>
+                    <select name="familiar" id="familiar">
+                        <option value="1">Damian Suarez</option>
+                        <option value="2">Julia Zambrano</option>
+                        <option value="3">Alberto Suarez</option>
+                        <option value="4">Julia Suarez</option>
+                        <option value="5">Delia Fernández</option>
+                    </select><br><br>
+                    <button type="submit">Dar de Alta</button>
+                    <button type="reset">Borrar</button>
+                </div>
+            </form>
+            <br><br>
+            <button type=""><a href='consulta.php'>Volver</a></button>
+        </div>
 </body>
 </html>
