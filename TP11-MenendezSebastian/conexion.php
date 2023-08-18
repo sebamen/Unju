@@ -11,7 +11,7 @@
     function conectar(){
         $servidor   = "localhost";
         $usuario    = "root";
-        $contraseña = "vertrigo";
+        $contraseña = "";
         $db         = "db_movimientos";
 
         $enlace = mysqli_connect($servidor,$usuario,$contraseña,$db);
